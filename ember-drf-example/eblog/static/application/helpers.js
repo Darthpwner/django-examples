@@ -1,6 +1,6 @@
-(function(Blog, $, undefined ) {
+(function(Dashboard, $, undefined ) {
     Ember.Handlebars.registerBoundHelper('date', function(date) {
         //moment.lang('pl');
         return moment(date).fromNow();
     });
-}(window.Blog, jQuery));
+}(window.Dashboard, jQuery));

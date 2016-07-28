@@ -1,0 +1,17 @@
+{% load staticfiles %}<!doctype html>
+<html>
+    <head>
+        <title>Django + Django Rest Framework + Ember.js example</title>
+        <meta name="Description" content="" />
+        <link rel="stylesheet" type="text/css" media="all" href="{% static "styles.css" %}" />
+    </head>
+    <body>
+    {% block body %}
+        <h1><a href="{% url 'summary' %}">Example Django Server</a></h1>
+        <nav>
+
+        </nav>
+        {% block content %}{% endblock %}
+    {% endblock %}
+    </body>
+</html>

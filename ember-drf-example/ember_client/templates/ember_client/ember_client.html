@@ -2,18 +2,10 @@
 {% load staticfiles %}
 
 {% block body %}
-<script type="text/x-handlebars">
-    {% include "ember_client/body.handlebars" %}
+<script type="text/x-handlebars" data-template-name="summary">
+	{% include "ember_client/summary.hbs" %}
 </script>
-<script type="text/x-handlebars" data-template-name="posts">
-    {% include "ember_client/posts.handlebars" %}
-</script>
-<script type="text/x-handlebars" data-template-name="categoryPosts">
-    {% include "ember_client/posts.handlebars" %}
-</script>
-<script type="text/x-handlebars" data-template-name="post">
-    {% include "ember_client/post.handlebars" %}
-</script>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="{% static 'vendor/handlebars-v1.3.0.js' %}"></script>
 <script src="{% static 'vendor/ember.js' %}"></script>
@@ -30,4 +22,5 @@
 <script src="{% static 'application/views.js' %}"></script>
 
 <!-- Insert stuff here -->
+YOLO
 {% endblock %}

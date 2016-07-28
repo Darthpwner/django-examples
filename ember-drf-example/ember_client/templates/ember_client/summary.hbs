@@ -1,0 +1,12 @@
+{% verbatim %}
+<div class="blog-app">
+    <h1>{{#link-to "summary"}}Example Dashboard{{/link-to}}</h1>
+    <nav>
+        
+    </nav>
+    {{outlet}}
+</div>
+{% endverbatim %}
+<footer>
+    <a href="{% url 'summary' %}">Classic version</a>
+</footer>

@@ -57,3 +57,13 @@ class PostSetView(viewsets.ReadOnlyModelViewSet):
     serializer_class = serializers.PostSerializer
     filter_fields = ('category', )
     queryset = models.Post.objects.all()
+
+class SummaryView(generic.DetailView):
+    model = models.Summary
+
+summary_view = SummaryView.as_view()
+
+class SummarySetView(viewsets.ReadOnlyModelViewSet):
+    queryset = models.Summary.objects.all()
+    serializer_class = serializers.SummarySerializer
+

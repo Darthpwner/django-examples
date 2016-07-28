@@ -9,6 +9,7 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 router.register(r'categories', django_server.CategorySetView)
 router.register(r'posts', django_server.PostSetView)
+router.register(r'summary', django_server.SummarySetView)
 
 
 urlpatterns = patterns(

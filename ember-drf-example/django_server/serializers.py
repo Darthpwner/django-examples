@@ -11,3 +11,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Post
+
+class SummarySerializer(serializers.ModelSerializer):
+	class Meta:
+		model = models.Summary

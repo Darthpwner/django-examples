@@ -1,6 +1,6 @@
 {% verbatim %}
 <div class="blog-app">
-    <h1>{{#link-to "posts"}}Example Blog{{/link-to}}</h1>
+    <h1>{{#link-to "summary"}}Example Blog{{/link-to}}</h1>
     <nav>
         {{#each category in categories itemController="category"}}
             {{#link-to "categoryPosts" category.id classNameBindings="controller.isActive:current"}}{{category.name}}{{/link-to}}
@@ -10,5 +10,5 @@
 </div>
 {% endverbatim %}
 <footer>
-    <a href="{% url 'posts' %}">Classic version</a>
+    <a href="{% url 'summary' %}">Classic version</a>
 </footer>

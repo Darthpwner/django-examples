@@ -12,10 +12,8 @@ from rest_framework import routers
 # router.register(r'summary', django_server.SummarySetView)
 
 
-urlpatterns = patterns(
-    '',
-    url(r'^django_server/', include('django_server.urls')),
-    url(r'^admin/', include(admin.site.urls)),
-    # url(r'^api/', include(router.urls)),
-    url(r'^summary/', 'ember_client.views.ember_view', name='home'),
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns = [
+    url(r'^', include('django_server.urls')),
+    url(r'^admin/', admin.site.urls),
+    # url(r'^summary_client/', 'ember_client.views.ember_view', name='home'),
+] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 PROJECT_APPS = (
     'django_server',
-    'eblog',
+    'ember_client',
 )
 INSTALLED_APPS = (
     'django.contrib.admin',

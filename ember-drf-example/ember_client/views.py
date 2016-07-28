@@ -2,6 +2,6 @@ from django.views.generic import TemplateView
 
 
 class EmberView(TemplateView):
-    template_name = 'eblog/blog.html'
+    template_name = 'ember_client/blog.html'
 
 ember_view = EmberView.as_view()

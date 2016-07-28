@@ -13,10 +13,10 @@ router.register(r'posts', django_server.PostSetView)
 
 urlpatterns = patterns(
     '',
-    url(r'^$', 'eblog.views.ember_view', name='home'),
-    url(r'^posts/$', 'eblog.views.ember_view', name='home'),
-    url(r'^posts/(?P<slug>[\w\-_]+)/$', 'eblog.views.ember_view', name='home'),
-    url(r'^category/(?P<id>[\w\-_]+)/$', 'eblog.views.ember_view', name='home'),
+    url(r'^$', 'ember_client.views.ember_view', name='home'),
+    url(r'^posts/$', 'ember_client.views.ember_view', name='home'),
+    url(r'^posts/(?P<slug>[\w\-_]+)/$', 'ember_client.views.ember_view', name='home'),
+    url(r'^category/(?P<id>[\w\-_]+)/$', 'ember_client.views.ember_view', name='home'),
     url(r'^django_server/', include('django_server.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(router.urls)),

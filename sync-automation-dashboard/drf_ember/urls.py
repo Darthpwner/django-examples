@@ -15,5 +15,5 @@ from rest_framework import routers
 urlpatterns = [
     url(r'^', include('django_server.urls')),
     url(r'^admin/', admin.site.urls),
-    # url(r'^summary_client/', 'ember_client.views.ember_view', name='home'),
+    url(r'^summary_client/', 'ember_client.views.ember_view', name='home'),
 ] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

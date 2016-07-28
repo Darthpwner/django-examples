@@ -1,22 +1,27 @@
-(function(Blog, $, undefined ) {
-    Blog.IndexRoute = Ember.Route.extend({
+(function(Dashboard, $, undefined ) {
+    Dashboard.IndexRoute = Ember.Route.extend({
         redirect: function() {
-            this.transitionTo('posts');
+            this.transitionTo('summary');
         }
     });
-    Blog.PostsRoute = Ember.Route.extend({
-        model: function() {
-            return this.get('store').find('post');
-        }
-    });
-    Blog.CategoryPostsRoute = Ember.Route.extend({
+    // Dashboard.PostsRoute = Ember.Route.extend({
+    //     model: function() {
+    //         return this.get('store').find('post');
+    //     }
+    // });
+    // Dashboard.CategoryPostsRoute = Ember.Route.extend({
+    //     model: function(params) {
+    //         return this.get('store').find('post', {'category': params.id });
+    //     }
+    // });
+    // Dashboard.PostRoute = Ember.Route.extend({
+    //     model: function(params) {
+    //         return this.get('store').find('post', params.id);
+    //     }
+    // });
+    Dashboard.SummaryRoute = Ember.Route.extend({
         model: function(params) {
-            return this.get('store').find('post', {'category': params.id });
+            return this.get('store').find('summary', {'id:' params.id})
         }
     });
-    Blog.PostRoute = Ember.Route.extend({
-        model: function(params) {
-            return this.get('store').find('post', params.id);
-        }
-    });
-}(window.Blog, jQuery));
+}(window.Dashboard, jQuery));

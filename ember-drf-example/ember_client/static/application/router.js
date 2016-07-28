@@ -1,12 +1,14 @@
-(function(Blog, $, undefined) {
-    Blog.Router.map(function() {
-        this.route('posts');
-        this.route('categoryPosts', {path: 'category/:id'});
-        this.route('post', {path: 'posts/:id'});
+(function(Dashboard, $, undefined) {
+    Dashboard.Router.map(function() {
+        // this.route('posts');
+        // this.route('categoryPosts', {path: 'category/:id'});
+        // this.route('post', {path: 'posts/:id'});
+        this.route('summary');
     });
     if (window.history && window.history.pushState) {
-        Blog.Router.reopen({
+        Dashboard.Router.reopen({
           location: 'history'
         });
     }
-}(window.Blog, jQuery));
+}(window.Dashboard, jQuery));
+

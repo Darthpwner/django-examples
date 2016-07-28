@@ -1,8 +1,8 @@
 from django.views import generic
 from rest_framework import viewsets
 
-from blog import models
-from blog import serializers
+from django_server import models
+from django_server import serializers
 
 
 class HomeView(generic.ListView):
@@ -14,7 +14,7 @@ home_view = HomeView.as_view()
 
 class CategoryPosts(generic.DetailView):
     model = models.Category
-    template_name = 'blog/post_list.html'
+    template_name = 'django_server/post_list.html'
 
     def get_context_data(self, **kwargs):
         context = super(CategoryPosts, self).get_context_data(**kwargs)
@@ -45,11 +45,11 @@ post_view = PostView.as_view()
 
 
 class CategorySetView(viewsets.ReadOnlyModelViewSet):
-    model = models.Category
+    queryset = models.Category.objects.all()
     serializer_class = serializers.CategorySerializer
 
     def get_queryset(self):
-        return models.Category.objects.all()
+        return queryset
 
 
 class PostSetView(viewsets.ReadOnlyModelViewSet):

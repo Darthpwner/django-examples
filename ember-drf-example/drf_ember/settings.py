@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 PROJECT_APPS = (
-    'blog',
+    'django_server',
     'eblog',
 )
 INSTALLED_APPS = (
@@ -53,7 +53,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
-    "blog.context_processors.categories"
+    "django_server.context_processors.categories"
 )
 
 MIDDLEWARE_CLASSES = (

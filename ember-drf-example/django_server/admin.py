@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from blog import models
+from django_server import models
 
 
 class CategoryAdmin(admin.ModelAdmin):

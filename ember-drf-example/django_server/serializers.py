@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from blog import models
+from django_server import models
 
 
 class CategorySerializer(serializers.ModelSerializer):

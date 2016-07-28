@@ -1,2 +1,2 @@
-window.Blog = Ember.Application.create();
+window.Dashboard = Ember.Application.create();
 

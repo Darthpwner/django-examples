@@ -7,7 +7,7 @@
     </head>
     <body>
     {% block body %}
-        <h1><a href="{% url 'posts' %}">Example Blog</a></h1>
+        <h1><a href="{% url 'posts' %}">Example Django Server</a></h1>
         <nav>
             {% for category_entry in categories %}
                 <a href="{% url 'category-posts' category_entry.id %}" class="{% if category_entry.id == category.id or category_entry.id == post.category_id %}active{% endif %}">{{ category_entry.name }}</a>

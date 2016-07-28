@@ -1,4 +1,4 @@
-from blog.models import Category
+from django_server.models import Category
 
 
 def categories(request):
